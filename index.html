@@ -1,17 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Basic NAVBAR with TAILWIND CSS</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp,container-queries"></script>
+    <script
+        src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp,container-queries"></script>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <script src="tailwind.config.js"></script>
 </head>
-<body>
-    
-    <h1 class="text-3xl text-red-500">Welcome Tailwind</h1>
 
+<body class="bg-[url(./img/hbg.jpg)] bg-cover bg-center h-screen">
+
+    <!-- 30 is an opacity -->
+    <header class="bg-[#FFFFFF30] text-white">
+
+        <!-- justify between -->
+        <nav class="flex items-center justify-between px-12 h-16">
+            <a href="#" class="font-bold text-2xl text-red-500 lg:px-5 bg-slate-300 gap-3 lg:mr-8 rounded border border-sky-300">
+                WelcomeTailwind
+            </a>
+
+            <!-- absolute -->
+            <!-- top-[64px] to -top-full -->
+             <!-- max-bg -->
+            <div
+                class="dropdown-menu absolute -top-full left-0 max-lg:bg-[#FFFFFF30] w-full flex flex-col gap-6 items-center py-2 text-lg font-bold lg:static lg:flex-row lg:justify-between lg:gap-8">
+                <ul class="flex flex-col items-center lg:flex-row gap-6 lg:gap-8">
+                    <li class="hover:text-orange-400 hover:cursor-pointer">Home</li>
+                    <li class="hover:text-orange-400 hover:cursor-pointer">News</li>
+                    <li class="hover:text-orange-400 hover:cursor-pointer">Tutorial</li>
+                    <li class="hover:text-orange-400 hover:cursor-pointer">Contact Us</li>
+                </ul>
+
+                <div class="flex flex-col items-center gap-3 lg:flex-row lg:gap-6">
+                    <button
+                        class="bg-orange-500 px-2 py-1 rounded hover:border-2 hover:border-orange-500 hover:bg-transparent">Login</button>
+                    <button
+                        class="bg-orange-500 px-2 py-1 rounded hover:border-2 hover:border-orange-500 hover:bg-transparent">Sign
+                        Up</button>
+                </div>
+            </div>
+
+            <!-- font awesome to get an icon -->
+            <!-- toggle-button -->
+            <div class="toggle-button lg:hidden">
+                <!-- fa-lg make it bigger icon -->
+                <i class="fa-duotone fa-solid fa-bars fa-lg cursor-pointer"></i>
+            </div>
+        </nav>
+    </header>
+
+    <script src="script.js"></script>
 </body>
+
 </html>
